@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
 @Injectable({
 providedIn: 'root'
 })
@@ -9,10 +8,10 @@ constructor(private http: HttpClient ) { }
 rootURL = 'http://localhost:3080/api';
 
 
- getUsers(): Observable<any> {
+ getUsers(){
     return this.http.get(this.rootURL + '/users')
  }
 
- addUser(user: any): Observable<any> {
+ addUser(user: any){
 return this.http.post(this.rootURL + '/user', {user});}
 }

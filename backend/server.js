@@ -32,7 +32,7 @@ console.log(`Server listening on port::${port}`)
 
 function loadUsers() {
 
-      const data = fs.readFileSync(usersFilePath, 'utf-8');
+      const data = fs.readFileSync(usersFilePath);
       return JSON.parse(data) || [];
   }
 
